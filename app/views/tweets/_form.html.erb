@@ -5,16 +5,18 @@
   <%= f.number_field :reward %>
   <%= f.label "個数"%>
   <%= f.number_field :count %>
-  <%= f.hidden_field :latitude %>
-  <%= f.hidden_field :longitude %>
-  <%= f.submit "投稿" %>
+  <%= f.hidden_field :latitude, id: "latitude" %>
+  <%= f.hidden_field :longitude, id: "longitude" %>
+  <%= f.submit "投稿", disabled: true, id: "submit" %>
 <% end %>
 <script type="text/javascript">
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       // success callback
       function(position) {
-        alert( "latitude: " + position.coords.latitude + "\nlongitude: " + position.coords.longitude );
+        $("#latitude").val(position.coords.latitude)
+        $("#longitude").val(position.coords.longitude)
+        $("#submit").prop("disabled", false)
       },
       // error callback
       function(position) {
