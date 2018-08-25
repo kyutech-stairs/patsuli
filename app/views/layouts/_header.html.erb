@@ -1,9 +1,4 @@
 <header>
-<<<<<<< HEAD
-  <%= link_to(image_tag("home.png",class: "icon_home"), "/home/mypage") %>
-  <span class="header_title"><%= yield(:title) %></span>
-  <%= link_to(image_tag("plus.png",class: "icon_edit"), "/home/new") %>
-=======
   <div class="row">
     <div class="col">
       <%= link_to(image_tag("home.png",class: "icon_home"), "/home/mypage") %>
@@ -20,5 +15,4 @@
   <% else %>
     <%= link_to "login", sign_in_path %>
   <% end %>
->>>>>>> 46958c2825d651f3e1f172ee408e2dd72463b01b
 </header>
