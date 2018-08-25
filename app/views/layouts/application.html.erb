@@ -12,11 +12,21 @@
 
   <body>
     <header>
-      <%= link_to(image_tag("home.png"), "/home/mypage") %>
-      <%= "タイムライン" %>
-      <%= link_to(image_tag("home.png"), "/home/new") %>
       
+      <%= link_to(image_tag("home.png"), "/home/mypage") %>
+      <span class="timeline">
+        <%= "タイムライン" %>
+      </span>
+      <%= link_to(image_tag("plus.png"), "/home/new") %>
+    </header>
       
     <%= yield %>
+    
+    <footer>
+      <%= link_to(image_tag("search.png"), "/home/mypage") %>
+      <%= link_to(image_tag("bell.png"), "/home/mypage") %>
+      <%= link_to(image_tag("mail.png"), "/home/mypage") %>
+    </footer>
+    
   </body>
 </html>

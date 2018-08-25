@@ -1,14 +1,18 @@
-<%= form_for (@tweet), html: { name: "form" } do |f| %>
-  <%= f.label "欲しいもの" %>
-  <%= f.text_field :wishing %>
-  <%= f.label "報酬"%>
-  <%= f.number_field :reward %>
-  <%= f.label "個数"%>
-  <%= f.number_field :count %>
-  <%= f.hidden_field :latitude %>
-  <%= f.hidden_field :longitude %>
-  <%= f.submit "投稿" %>
-<% end %>
+<div class="new">
+  <div class="container">
+    <%= form_for (@tweet), html: { name: "form" } do |f| %>
+      <%= f.label "欲しいもの" %>
+      <%= f.text_field :wishing %>
+      <%= f.label "個数"%>
+      <%= f.number_field :count %>
+      <%= f.label "報酬"%>
+      <%= f.number_field :reward %>
+      <%= f.hidden_field :latitude %>
+      <%= f.hidden_field :longitude %>
+      <%= f.submit "パつる" %>
+    <% end %>
+  </div>
+</div>
 <script type="text/javascript">
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
