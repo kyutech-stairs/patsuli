@@ -1,18 +1,18 @@
 <% provide(:title, "パつり") %>
 <div class="tweets">
-  <div class="tweet">
-<%= form_for (@tweet), html: { name: "form" } do |f| %>
-  <%= f.label "欲しいもの" %>
-  <%= f.text_field :wishing %>
-  <%= f.label "報酬"%>
-  <%= f.number_field :reward %>
-  <%= f.label "個数"%>
-  <%= f.number_field :count %>
-  <%= f.hidden_field :latitude, id: "latitude" %>
-  <%= f.hidden_field :longitude, id: "longitude" %>
-  <%= f.submit "投稿", disabled: true, id: "submit" %>
-<% end %>
-</div>
+  <%= form_for (@tweet), html: { name: "form" } do |f| %>
+  <ul>
+    <li><%= f.label "欲しいもの" %></li>
+    <span><%= f.text_field :wishing %></span>
+    <li><%= f.label "報酬"%></li>
+    <span><%= f.number_field :reward %></span>
+    <li><%= f.label "個数"%></li>
+    <span><%= f.number_field :count %></span>
+    <%= f.hidden_field :latitude, id: "latitude" %>
+    <%= f.hidden_field :longitude, id: "longitude" %>
+    <%= f.submit "パつる", disabled: true, id: "submit" %>
+  </ul>
+  <% end %>
 <script type="text/javascript">
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
