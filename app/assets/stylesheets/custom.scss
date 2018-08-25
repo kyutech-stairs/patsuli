@@ -46,16 +46,6 @@ header{
   }
 }
 
-.return_object{
-  position: absolute;
-  width: 14px;
-  height: 24px;
-  left: calc(50% - 14px/2 - 156.5px);
-  top: calc(50% - 24px/2 - 300.5px);
-
-  background: #FFFFFF;
-}
-
 footer{
   height: $footer_size_hight;
   .nav_icon{
