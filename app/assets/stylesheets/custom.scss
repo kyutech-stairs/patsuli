@@ -18,12 +18,17 @@ $image_size: 60px;
   width: $image_size;
 }
 
+*{
+  font-family: Hannotate SC;
+  font-style: normal;
+  font-weight: normal;
+  color: #555555;
+}
+
 body{
   position: absolute;
-  width: 1440px;
-  height: 900px;
-  left: 0px;
-  top: 0px;
+  width: 100vw;
+  height: 100vh;
 
   background: linear-gradient(122.01deg, #FF8B03 0%, rgba(255, 255, 255, 0) 100%), #FF5C00;
 }
