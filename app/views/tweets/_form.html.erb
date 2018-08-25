@@ -4,12 +4,12 @@
   <ul>
     <div class="tweet">
     <li><%= f.label "欲しいもの" %></li>
-    <span><%= f.text_field :wishing %></span>
-    </div>
+
+    <span class="tweet"><%= f.text_field :wishing %></span>
     <li><%= f.label "報酬"%></li>
-    <span><%= f.number_field :reward %></span>
+    <span class="tweet"><%= f.number_field :reward %></span>
     <li><%= f.label "個数"%></li>
-    <span><%= f.number_field :count %></span>
+    <span class="tweet"><%= f.number_field :count %></span>
     <%= f.hidden_field :latitude, id: "latitude" %>
     <%= f.hidden_field :longitude, id: "longitude" %>
     <%= f.submit "パつる", disabled: true, id: "submit" %>

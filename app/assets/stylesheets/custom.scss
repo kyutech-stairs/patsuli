@@ -48,7 +48,7 @@ header{
   .icon_edit{
     position: absolute;
     @extend %base_icon_size;
-    left: resize_vw(330px);
+    left: resize_vw(320px);
     top: resize_vh(21px);
   }
   .header_title{
@@ -65,6 +65,9 @@ header{
     font-size: $head-title-font-size;
     text-align: center;
     color: #FFFFFF;
+  }
+  .hidden_text{
+    display: none;
   }
 }
 
@@ -101,49 +104,58 @@ footer{
   padding-top: 20px;
   position: absolute;
   width: resize_vw(343px);
-  height: resize_vh(399px);
+  height: resize_vh(360px);
   left: resize_vw(16px);
   top: resize_vh(102px);
 
   background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
   form{
-    padding-left: 20px;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 60px;
     font-size: $head-title-font-size;
+    position: relative;
     ul{
       list-style:none;
+      height: 100%;
       margin:0; padding:0;
+      .tweet {
+        padding: 20px 30px;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 4px 2px 6px #c1ced7;
+      }
+      span{
+        width: 90%;
+        float:left;
+        margin:0 8px 10px 0; padding:0;
+        textarea{
+          width: 100%;
+          box-shadow: inset 0px 4px 16px rgba(0, 0, 0, 0.25);
+        }
+      }
     }
     li{
       list-style:none;
       margin:0; padding:6px;
       clear:both;
-      span{
-        width: 100%;
-        float:left;
-        margin:0 5px 0 0; padding:0;
-        textarea{
-          width: 100%;
-          box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
-        }
         label{
-          color:#999;
+          color:#000;
           font-weight:normal;
           font-size:80%;
         }
       }
-    }
     label{
       display:block;
       font-weight:bold;
       color:#000;
     }
-    position: relative;
     input#submit{
       position: absolute;
       right: 1em;
-      bottom: 0;
+      bottom: 1em;
       color: black;
       font-family: Hannotate SC;
       width: resize_vw(100px);
@@ -155,6 +167,7 @@ footer{
     }
   }
 }
+
 
 // #demo {
 //        width:60%;
@@ -196,3 +209,13 @@ footer{
 //    #demo input#email {
 //        width:200px;
 //    }
+
+.poll_list{
+  padding-top: 20px;
+  position: absolute;
+  width: resize_vw(343px);
+  height: resize_vh(360px);
+  left: resize_vw(16px);
+  top: resize_vh(102px);
+}
+
