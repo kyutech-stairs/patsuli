@@ -1,7 +1,11 @@
-<% provide(:title, "タイムライン") %>
 
-<div class="tweets">
-  <% if @tweets %>
+<div class="tweets"> 
+<%= form_tag("/seek/index", method: "get") do %>
+<%= label_tag :wishing, "パつられるもの" %><%= text_field_tag :wishing, params[:wishing] %>
+<%= submit_tag "検索" %>
+<% end %>
+
+<% if @tweets %>
     <% @tweets.each do |tweet| %>
       <div class ="tweet">
         <%= tweet.wishing %> 
@@ -14,4 +18,5 @@
       </div>
     <% end %>
   <% end %>
+
 </div>

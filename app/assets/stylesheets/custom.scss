@@ -81,3 +81,23 @@ footer{
     padding: 40px;
   }
 }
+
+.tweet {
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.running {
+  height: 35px;
+  width: 35pxd;
+}
+
+.tweets {
+  width: 200px;
+  margin: 200px auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  clear: both;
+}

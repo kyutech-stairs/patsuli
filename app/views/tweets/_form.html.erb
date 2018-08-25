@@ -1,5 +1,6 @@
 <% provide(:title, "パつり") %>
-
+<div class="tweets">
+  <div class="tweet">
 <%= form_for (@tweet), html: { name: "form" } do |f| %>
   <%= f.label "欲しいもの" %>
   <%= f.text_field :wishing %>
@@ -11,6 +12,7 @@
   <%= f.hidden_field :longitude, id: "longitude" %>
   <%= f.submit "投稿", disabled: true, id: "submit" %>
 <% end %>
+</div>
 <script type="text/javascript">
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -27,3 +29,5 @@
     )
   }
 </script>
+
+</div>
