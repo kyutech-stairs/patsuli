@@ -1,5 +1,6 @@
 class Tweet < ApplicationRecord
   belongs_to :user
+  has_one :pashiri
   validates :wishing, presence: true
   validates :reward, presence: true
   validates :count, presence: true
