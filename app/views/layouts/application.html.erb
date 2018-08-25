@@ -12,7 +12,9 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <%= render 'home/location'%>
+    <%= if current_user %>
+      <%= render 'home/location'%>
+    <% end %>
     <%= yield %>
     <%= render 'layouts/footer'%>
   </body>
