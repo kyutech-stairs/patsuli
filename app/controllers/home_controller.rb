@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.where(status: false)
   end
 
   def authentication
