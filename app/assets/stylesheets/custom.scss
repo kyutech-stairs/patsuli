@@ -10,11 +10,12 @@ $header_titile_font_size: 23px;
 $footer_size_hight: 66px;
 $header_size_hight: 66px;
 $poll_sell_size_hight: 162px;
+$image_size: 60px;
 
 // standerd image size
-%image_size{
-  height: 25px;
-  width: 25px;
+%image_shape{
+  height: $image_size;
+  width: $image_size;
 }
 
 body{
@@ -30,10 +31,10 @@ body{
 header{
   height: $header_size_hight;
   .icon_home{
-    @extend %image_size;
+    @extend %image_shape;
   }
   .icon_edit{
-    @extend %image_size;
+    @extend %image_shape;
   }
   .header_title{
     font-size: $header_titile_font_size;
@@ -53,6 +54,6 @@ header{
 footer{
   height: $footer_size_hight;
   .nav_icon{
-    @extend %image_size;
+    @extend %image_shape;
   }
 }
