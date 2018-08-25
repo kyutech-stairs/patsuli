@@ -1,7 +1,16 @@
 <header>
-  <%= link_to(image_tag("home.png",class: "icon_home"), "/home/mypage") %>
-  <span class="header_title"><%= yield(:title) %></span>
-  <%= link_to(image_tag("plus.png",class: "icon_edit"), "/home/new") %>
+
+  <div class="row">
+    <div class="col">
+  <%= link_to(image_tag("home.png",class: "icon_home"), root_path) %>
+    </div>
+    <div class="col">
+      <span class="header_title"><%= yield(:title) %></span>
+    </div>
+    <div class="col">
+  <%= link_to(image_tag("plus.png",class: "icon_edit"), new_tweet_path) %>
+    </div>
+  </div>
 
   <% if current_user %>
     <%= link_to "logout", sign_out_path %>
