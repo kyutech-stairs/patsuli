@@ -1,5 +1,5 @@
 <% provide(:title, "パつり") %>
-
+<div class="tweets">
 <%= form_for (@tweet), html: { name: "form" } do |f| %>
   <%= f.label "欲しいもの" %>
   <%= f.text_field :wishing %>
@@ -27,3 +27,5 @@
     )
   }
 </script>
+
+</div>

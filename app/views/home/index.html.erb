@@ -1,6 +1,6 @@
 <% provide(:title, "タイムライン") %>
 
-<div class="container">
+<div class="tweets">
   <% if @tweets %>
     <% @tweets.each do |tweet| %>
       <div class ="tweet">
@@ -9,7 +9,7 @@
         <%= tweet.count %><br>
         <br>
         <br>
-        <%= link_to image_tag('running.png'), tweet_pashiris_path(tweet), method: :post %>
+        <%= link_to image_tag('running.png',class: "running"), tweet_pashiris_path(tweet), method: :post %>
         <span>￥</span><%= tweet.reward %>
       </div>
     <% end %>
