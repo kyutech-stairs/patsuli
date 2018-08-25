@@ -10,7 +10,7 @@ $header_titile_font_size: 23px;
 $footer_size_hight: 66px;
 $header_size_hight: 66px;
 $poll_sell_size_hight: 162px;
-$image_size: 60px;
+$image_size: 80px;
 
 // standerd image size
 %image_shape{
@@ -23,6 +23,7 @@ $image_size: 60px;
   font-style: normal;
   font-weight: normal;
   color: #555555;
+
 }
 
 body{
@@ -35,6 +36,7 @@ body{
 
 header{
   height: $header_size_hight;
+  width: 100vw;
   .icon_home{
     @extend %image_shape;
   }

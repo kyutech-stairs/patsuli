@@ -1,4 +1,13 @@
 <header>
-  <%= link_to(image_tag("home.png",class: "icon_home"), "/home/mypage") %>
-  <%= link_to(image_tag("plus.png",class: "icon_edit"), "/home/new") %>
+  <div class="row">
+    <div class="col">
+      <%= link_to(image_tag("home.png",class: "icon_home"), "/home/mypage") %>
+    </div>
+    <div class="col">
+      <span class="header_title"><%= yield(:title) %></span>
+    </div>
+    <div class="col">
+      <%= link_to(image_tag("plus.png",class: "icon_edit"), "/home/new") %>
+    </div>
+  </div>
 </header>
