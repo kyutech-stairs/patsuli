@@ -2,7 +2,6 @@
 <div class="tweets">
   <%= form_for (@tweet), html: { name: "form" } do |f| %>
   <ul>
-    <div class="tweet">
     <li><%= f.label "欲しいもの" %></li>
 
     <span class="tweet"><%= f.text_field :wishing %></span>
