@@ -1,54 +1,83 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+$full-width: 100vw;
+$full-hight: 100vh;
+$head-icon-home: (25px/375px) * 100vw;
+$bund-hight-size: (66px/667px) * 100vh;
+$head-title-font-size: (23/66) * $bund-hight-size;
 
-// font size
-$poll_sell_title_font_size: 29px;
-$poll_sell_url_font_size: 17px;
-$header_titile_font_size: 23px;
-
-// hight size
-$footer_size_hight: 66px;
-$header_size_hight: 66px;
-$poll_sell_size_hight: 162px;
-$image_size: 60px;
-
-// standerd image size
-%image_shape{
-  height: $image_size;
-  width: $image_size;
+@function resize_vw($child_size){
+  @return ($child_size / 375px) * 100vw;
+}
+@function resize_vh($child_size){
+  @return ($child_size / 667px) * 100vh;
 }
 
-*{
-  font-family: Hannotate SC;
-  font-style: normal;
-  font-weight: normal;
-  color: #555555;
+@function icon_size($isize){
+  @return ($isize/375px) * 100vw;
+}
+%base_icon_size{
+  height: $head-icon-home;
+  width: $head-icon-home;
 }
 
 body{
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: $full-width;
+  height: $full-hight;
+  left: 0px;
+  top: 0px;
 
-  background: linear-gradient(122.01deg, #FF8B03 0%, rgba(255, 255, 255, 0) 100%), #FF5C00;
+  background: linear-gradient(102.39deg, #FF8B03 0%, rgba(255, 255, 255, 0) 100%), #FF5C00;
+}
+.box{
+  display: inline;
 }
 
 header{
-  height: $header_size_hight;
+  position: absolute;
+  width: $full-width;
+  height: $bund-hight-size;
+  left: 0px;
+  top: 0px;
   .icon_home{
-    @extend %image_shape;
+    position: absolute;
+    @extend %base_icon_size;
+    left: resize_vw(22px);
+    top: resize_vh(21px);
   }
   .icon_edit{
-    @extend %image_shape;
+    position: absolute;
+    @extend %base_icon_size;
+    left: resize_vw(330px);
+    top: resize_vh(21px);
   }
   .header_title{
-    font-size: $header_titile_font_size;
+    position: absolute;
+    width: resize_vw(138px);
+    height: resize_vh(28px);
+    left: resize_vw(119px);
+    top: resize_vh(10px);
+
+    font-family: Hannotate SC;
+    font-style: normal;
+    font-weight: normal;
+    line-height: $head-title-font-size + 3;
+    font-size: $head-title-font-size;
+    text-align: center;
+    color: #FFFFFF;
   }
 }
 
 footer{
-  height: $footer_size_hight;
+  position: absolute;
+  width: $full-width;
+  height: $bund-hight-size;
+  left: 0px;
+  top: resize_vh(601px);
   .nav_icon{
-    @extend %image_shape;
+    height: icon_size(30px);
+    width: icon_size(30px);
+  }
+  .icon_base{
+    padding: 40px;
   }
 }
