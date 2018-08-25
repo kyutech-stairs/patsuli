@@ -12,7 +12,7 @@
 
   <body>
     <header>
-      <%= render 'header' %>
+      <%= render 'layouts/header' %>
     </header>
       
     <%= yield %>
@@ -21,7 +21,7 @@
     <footer>
       
       <%= link_to(image_tag("search.png",class: "nav_icon"), "/home/mypage") %>
-      <%= link_to(image_tag("bell.png",class: "nav_icon") "/home/mypage") %>
+      <%= link_to(image_tag("bell.png",class: "nav_icon"), "/home/mypage") %>
       <%= link_to(image_tag("mail.png",class: "nav_icon"), "/home/mypage") %>
       
     </footer>
