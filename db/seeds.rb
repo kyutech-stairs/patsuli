@@ -1,4 +1,12 @@
 User.create!(email: "sample@gmail.com",
             password: "password",
             password_confirmation: "password",
-            name: "参 布流")
+            name: "naoto")
+User.create!(email: "sample1@gmail.com",
+            password: "password",
+            password_confirmation: "password",
+            name: "kome")
+User.create!(email: "sample2@gmail.com",
+            password: "password",
+            password_confirmation: "password",
+            name: "sono")
