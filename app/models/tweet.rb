@@ -17,5 +17,9 @@ class Tweet < ApplicationRecord
     end
     return a
   end
+  
+  scope :get_by_wishing, ->(wishing){
+    where("wishing like ?", "%#{wishing}%")
+  } 
     
 end
