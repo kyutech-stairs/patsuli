@@ -1,2 +1,12 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="timeline">
+    <div class="container">
+        <% @tweets.each do |tweet| %>
+            <div class ="tweet">
+                <%= @tweet.wishing %>&nbsp;&nbsp;<%="×" %><%= @tweet.count %><br>
+                <br>
+                <br>
+                <%= image_tag('running.png') %>&nbsp;<%= "￥" %><%= @tweet.reward %>
+            </div>
+        <% end %>
+    </div>
+</div>
