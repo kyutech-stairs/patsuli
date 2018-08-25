@@ -1,0 +1,25 @@
+<%= form_for (@tweet), html: { name: "form" } do |f| %>
+  <%= f.label "欲しいもの" %>
+  <%= f.text_field :wishing %>
+  <%= f.label "報酬"%>
+  <%= f.number_field :reward %>
+  <%= f.label "個数"%>
+  <%= f.number_field :count %>
+  <%= f.hidden_field :latitude %>
+  <%= f.hidden_field :longitude %>
+  <%= f.submit "投稿" %>
+<% end %>
+<script type="text/javascript">
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      // success callback
+      function(position) {
+        alert( "latitude: " + position.coords.latitude + "\nlongitude: " + position.coords.longitude );
+      },
+      // error callback
+      function(position) {
+        alert( "can't get position" );
+      }
+    )
+  }
+</script>
