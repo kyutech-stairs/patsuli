@@ -11,20 +11,25 @@
   </head>
 
   <body>
+<<<<<<< HEAD
     <header>
       <%= render 'layouts/header' %>
     </header>
       
+=======
+    <%= render 'layouts/header' %>
+
+>>>>>>> 098faabdeedd07e94cf05054ac5b39a7ee27bdb0
     <%= yield %>
-    
-    
+
+
     <footer>
-      
+
       <%= link_to(image_tag("search.png",class: "nav_icon"), "/home/mypage") %>
       <%= link_to(image_tag("bell.png",class: "nav_icon"), "/home/mypage") %>
       <%= link_to(image_tag("mail.png",class: "nav_icon"), "/home/mypage") %>
-      
+
     </footer>
-    
+
   </body>
 </html>
