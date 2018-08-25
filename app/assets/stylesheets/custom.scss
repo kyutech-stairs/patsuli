@@ -1,6 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// font size
+$poll_sell_title_font_size: 29px;
+$poll_sell_url_font_size: 17px;
+$header_titile_font_size: 23px;
+
+// hight size
+$footer_size_hight: 66px;
+$header_size_hight: 66px;
+$poll_sell_size_hight: 162px;
+
+// standerd image size
+%image_size{
+  height: 25px;
+  width: 25px;
+}
+
 body{
   position: absolute;
   width: 1440px;
@@ -9,4 +25,34 @@ body{
   top: 0px;
 
   background: linear-gradient(122.01deg, #FF8B03 0%, rgba(255, 255, 255, 0) 100%), #FF5C00;
+}
+
+header{
+  height: $header_size_hight;
+  .icon_home{
+    @extend %image_size;
+  }
+  .icon_edit{
+    @extend %image_size;
+  }
+  .header_title{
+    font-size: $header_titile_font_size;
+  }
+}
+
+.return_object{
+  position: absolute;
+  width: 14px;
+  height: 24px;
+  left: calc(50% - 14px/2 - 156.5px);
+  top: calc(50% - 24px/2 - 300.5px);
+
+  background: #FFFFFF;
+}
+
+footer{
+  height: $footer_size_hight;
+  .nav_icon{
+    @extend %image_size;
+  }
 }
