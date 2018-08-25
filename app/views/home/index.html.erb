@@ -1,9 +1,12 @@
-<<<<<<< HEAD
 <div class="timeline">
     <div class="container">
         <% @tweets.each do |tweet| %>
             <div class ="tweet">
                 <%= @tweet.wishing %>&nbsp;&nbsp;<%="×" %><%= @tweet.count %><br>
-                <>
-                <%= @user.name %><br>
-                <img src = "">
+                <br>
+                <br>
+                <%= image_tag('running.png') %>&nbsp;<%= "￥" %><%= @tweet.reward %>
+            </div>
+        <% end %>
+    </div>
+</div>
