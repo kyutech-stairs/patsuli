@@ -5,6 +5,7 @@ class PashirisController < ApplicationController
   end
   def create
     @tweet = Tweet.find(params[:tweet_id])
+    @tweet.update_attributes(status: true)
     @pashiri = @tweet.build_pashiri(user: current_user)
     if @pashiri.save
       #redirect to index
