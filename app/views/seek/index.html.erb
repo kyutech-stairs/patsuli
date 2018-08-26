@@ -1,6 +1,6 @@
 <% provide(:title, "検索") %>
 <div class="container poll_list">
-  <%= render 'form' %> 
+  <%= render 'form' %>
   <% if @tweets %>
     <% @tweets.each do |tweet| %>
       <%= render tweet%>
