@@ -241,6 +241,10 @@ $tweet_list: 77vh;
       display: inline;
       width: 50vw;
       text-align:center;
+      a{
+        text-decoration: none;
+        color: white;
+      }
     }
     &:active{
       background-color: white;
