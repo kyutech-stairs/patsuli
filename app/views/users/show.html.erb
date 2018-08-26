@@ -1,21 +1,9 @@
 <% provide(:title, "マイページ") %>
 
-  <div class="tweets">
+  <div class="container poll_list">
     <% if @tweets %>
       <% @tweets.each do |tweet| %>
-        <%= if @user.id = current_user.id %>
-          
-            <div class ="tweet">
-              <%= tweet.wishing %> 
-              <span>x</span>
-              <%= tweet.count %><br>
-              <br>
-              <br>
-              <%= link_to image_tag('running.png'), tweet_pashiris_path(tweet), method: :post %>
-              <span>￥</span><%= tweet.reward %>
-            </div>
-        <% end %>
-            
+        <%= render tweet %>
       <% end %>
     <% end %>
   </div>
