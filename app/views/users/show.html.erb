@@ -2,10 +2,28 @@
 
 
   <div class="container poll_list">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#tab1" class="nav-link" data-toggle="tab">todo</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab2" class="nav-link" data-toggle="tab">wish</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div id="tab1" class="tab-pane active">
+        <% if @pashiri_tweets %>
+          <% @pashiri_tweets.each do |tweet| %>
+            <%= render 'tweets/no_pashiri', tweet: tweet%>
+          <% end %>
+        <% end %>
+      </div>
+      <div id="tab2" class="tab-pane">
     <% if @tweets %>
       <% @tweets.each do |tweet| %>
         <%= render tweet %>
       <% end %>
     <% end %>
-  <% end %>
-</div>
+      </div>
+    </div>
+  </div>
