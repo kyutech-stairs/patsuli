@@ -1,18 +1,9 @@
-
-<div class="tweets"> 
-
-<% if @tweets %>
+<% provide(:title, "検索") %>
+<div class="container poll_list">
+  <%= render 'form' %> 
+  <% if @tweets %>
     <% @tweets.each do |tweet| %>
-      <div class ="tweet">
-        <%= tweet.wishing %> 
-        <span>x</span>
-        <%= tweet.count %><br>
-        <br>
-        <br>
-        <%= link_to image_tag('running.png',class: "running"), tweet_pashiris_path(tweet), method: :post %>
-        <span>￥</span><%= tweet.reward %>
-      </div>
+      <%= render tweet%>
     <% end %>
   <% end %>
-
 </div>
