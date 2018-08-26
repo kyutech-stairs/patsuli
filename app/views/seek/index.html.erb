@@ -1,9 +1,13 @@
 <% provide(:title, "検索") %>
-<div class="container poll_list">
+<div class="search-form">
   <%= render 'form' %>
-  <% if @tweets %>
-    <% @tweets.each do |tweet| %>
-      <%= render tweet%>
+  <div class="container search_risults">
+    <% if @tweets %>
+      <ul>
+        <% @tweets.each do |tweet| %>
+          <li><%= render tweet%></li>
+        <% end %>
+      </ul>
     <% end %>
-  <% end %>
+  </div>
 </div>
