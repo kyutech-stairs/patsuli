@@ -4,8 +4,6 @@
       function(position) {
         $("#interval_latitude").val(position.coords.latitude)
         $("#interval_longitude").val(position.coords.longitude)
-        $("#interval_sub").prop("disabled", false)
-        $("#form_submit").prop("disabled", false);
       },
       // error callback
       function(position) {
