@@ -1,0 +1,6 @@
+<div class="seek-form">
+  <%= form_tag(seek_index_path, method: "get") do %>
+    <%= label_tag :wishing, "パつられるもの" %><%= text_field_tag :wishing, params[:wishing] %>
+    <%= submit_tag "検索" %>
+  <% end %>
+</div>
