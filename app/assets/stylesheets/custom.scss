@@ -3,6 +3,7 @@ $full-hight: 100vh;
 $head-icon-home: (25px/375px) * 100vw;
 $bund-hight-size: (66px/667px) * 100vh;
 $head-title-font-size: (23/66) * $bund-hight-size;
+$header-icon-position-top: 35px;
 
 @function resize_vw($child_size){
   @return ($child_size / 375px) * 100vw;
@@ -48,28 +49,27 @@ header{
   .icon_home{
     position: absolute;
     @extend %base_icon_size;
-    left: resize_vw(22px);
-    top: resize_vh(21px);
+    left: resize_vw(30px);
+    top: resize_vh($header-icon-position-top);
   }
   .icon_reload{
-
     position: absolute;
     @extend %base_icon_size;
     left: resize_vw(280px);
-    top: resize_vh(21px);
+    top: resize_vh($header-icon-position-top);
   }
   .icon_edit{
     position: absolute;
     @extend %base_icon_size;
     left: resize_vw(300px);
-    top: resize_vh(21px);
+    top: resize_vh($header-icon-position-top);
   }
   .header_title{
     position: absolute;
     width: resize_vw(138px);
     height: resize_vh(28px);
     left: resize_vw(119px);
-    top: resize_vh(10px);
+    top: resize_vh(26px);
 
     font-family: Hannotate SC;
     font-style: normal;
