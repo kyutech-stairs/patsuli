@@ -2,8 +2,10 @@
   <%= tweet.wishing %> 
   <span>x</span>
   <%= tweet.count %><br>
-  <br>
-  <br>
+  <div class="compensation">
+  <a href="https://www.google.co.jp/maps?q=<%=tweet.latitude%>,<%= tweet.longitude%>" target="_blank"><%= image_tag("map.png", class: "map_icon") %></a>
+
   <%= image_tag('running.png',class: "running")  %>
   <span>￥</span><%= tweet.reward %>
+  </div>
 </div>
