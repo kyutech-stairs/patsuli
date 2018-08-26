@@ -1,5 +1,5 @@
 
-<div class="tweets"> 
+<div class="container"> 
 <%= form_tag("/seek/index", method: "get") do %>
 <%= label_tag :wishing, "パつられるもの" %><%= text_field_tag :wishing, params[:wishing] %>
 <%= submit_tag "検索" %>
