@@ -8,6 +8,9 @@
       <span class="header_title"><%= yield(:title) %></span>
     </div>
     <div class="col">
+      <%= render 'home/location' %>
+    </div>
+    <div class="col">
   <%= link_to(image_tag("plus.png",class: "icon_edit"), new_tweet_path) %>
     </div>
   </div>
