@@ -11,5 +11,5 @@
       }
     )
   }else{
-    alert("can't get postion")
+    alert("geolocation api に対応してません")
   }

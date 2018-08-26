@@ -1,7 +1,8 @@
 class LocationController < ApplicationController
   before_action :authenticate_user!
   def create
-    current_user.update_attributes(create_params)
+    if current_user.update_attributes(create_params)
+    end
   end
 
   private
