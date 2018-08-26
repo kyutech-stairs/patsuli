@@ -45,10 +45,17 @@ header{
     left: resize_vw(22px);
     top: resize_vh(21px);
   }
+  .icon_reload{
+    
+    position: absolute;
+    @extend %base_icon_size;
+    left: resize_vw(280px);
+    top: resize_vh(21px);
+  }
   .icon_edit{
     position: absolute;
     @extend %base_icon_size;
-    left: resize_vw(320px);
+    left: resize_vw(300px);
     top: resize_vh(21px);
   }
   .header_title{
