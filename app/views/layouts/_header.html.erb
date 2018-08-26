@@ -2,7 +2,7 @@
 
   <div class="row">
     <div class="col">
-  <%= link_to(image_tag("home.png",class: "icon_home"), root_path) %>
+  <%= link_to(image_tag("home.png",class: "icon_home"), current_user) %>
     </div>
     <div class="col">
       <span class="header_title"><%= yield(:title) %></span>
@@ -12,9 +12,11 @@
     </div>
   </div>
 
-  <% if current_user %>
-    <%= link_to "logout", sign_out_path %>
-  <% else %>
-    <%= link_to "login", sign_in_path %>
-  <% end %>
+  <div class="hidden_text">
+    <% if current_user %>
+      <%= link_to "logout", sign_out_path %>
+    <% else %>
+      <%= link_to "login", sign_in_path %>
+    <% end %>
+  </div>
 </header>

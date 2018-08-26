@@ -20,6 +20,7 @@ $head-title-font-size: (23/66) * $bund-hight-size;
 }
 
 body{
+  font-family: Hannotate SC;
   position: absolute;
   width: $full-width;
   height: $full-hight;
@@ -34,7 +35,7 @@ body{
 
 header{
   position: absolute;
-  width: $full-width;
+  // width: $full-width;
   height: $bund-hight-size;
   left: 0px;
   top: 0px;
@@ -47,7 +48,7 @@ header{
   .icon_edit{
     position: absolute;
     @extend %base_icon_size;
-    left: resize_vw(330px);
+    left: resize_vw(320px);
     top: resize_vh(21px);
   }
   .header_title{
@@ -64,6 +65,9 @@ header{
     font-size: $head-title-font-size;
     text-align: center;
     color: #FFFFFF;
+  }
+  .hidden_text{
+    display: none;
   }
 }
 
@@ -82,6 +86,7 @@ footer{
   }
 }
 
+// Tweet list
 .tweet {
   padding: 20px 30px;
   background-color: white;
@@ -89,15 +94,128 @@ footer{
   box-shadow: 0 2px 6px #c1ced7;
 }
 
+// Tweets poll
 .running {
   height: 35px;
   width: 35pxd;
 }
 
 .tweets {
-  width: 200px;
-  margin: 200px auto;
-  padding-left: 100px;
-  padding-right: 100px;
-  clear: both;
+  padding-top: 20px;
+  position: absolute;
+  width: resize_vw(343px);
+  height: resize_vh(360px);
+  left: resize_vw(16px);
+  top: resize_vh(102px);
+
+  background: #FFFFFF;
+  box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+  form{
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 60px;
+    font-size: $head-title-font-size;
+    position: relative;
+    ul{
+      list-style:none;
+      height: 100%;
+      margin:0; padding:0;
+      .tweet {
+        padding: 20px 30px;
+        background-color: white;
+        overflow: hidden;
+        box-shadow: 4px 2px 6px #c1ced7;
+      }
+      span{
+        width: 90%;
+        float:left;
+        margin:0 8px 10px 0; padding:0;
+        textarea{
+          width: 100%;
+          box-shadow: inset 0px 4px 16px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+    li{
+      list-style:none;
+      margin:0; padding:6px;
+      clear:both;
+        label{
+          color:#000;
+          font-weight:normal;
+          font-size:80%;
+        }
+      }
+    label{
+      display:block;
+      font-weight:bold;
+      color:#000;
+    }
+    input#submit{
+      position: absolute;
+      right: 1em;
+      bottom: 1em;
+      color: black;
+      font-family: Hannotate SC;
+      width: resize_vw(100px);
+      height: resize_vh(35px);
+      font-size: $head-title-font-size;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+      background: #E87B0C;
+      border-radius: 50px;
+    }
+  }
 }
+
+
+// #demo {
+//        width:60%;
+//    }
+//    #demo ul {
+//        list-style:none;
+//        margin:0; padding:0;
+//    }
+//    #demo li {
+//        list-style:none;
+//        margin:0; padding:6px;
+//        clear:both;
+//    }
+//    #demo label {
+//        display:block;
+//        font-weight:bold;
+//        color:#666;
+//    }
+//    #demo li span {
+//        float:left;
+//        margin:0 5px 0 0; padding:0;
+//    }
+//    #demo li span label {
+//        color:#999;
+//        font-weight:normal;
+//        font-size:80%;
+//    }
+//    #demo input.field,
+//    #demo textarea {
+//        background:#fff url(/content/img/css/fieldborder.png) repeat-x 0 0;
+//        border:1px solid #ddd;
+//        border-top-color:#ccc;
+//        border-left-color:#ccc;
+//        padding:3px;
+//    }
+//    #demo textarea {
+//        width:100%;
+//    }
+//    #demo input#email {
+//        width:200px;
+//    }
+
+.poll_list{
+  padding-top: 20px;
+  position: absolute;
+  width: resize_vw(343px);
+  height: resize_vh(360px);
+  left: resize_vw(16px);
+  top: resize_vh(102px);
+}
+
