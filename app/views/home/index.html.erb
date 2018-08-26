@@ -1,9 +1,13 @@
 <% provide(:title, "タイムライン") %>
 
 <div class="container poll_list">
-  <% if @tweets %>
-    <% @tweets.each do |tweet| %>
-      <%= render tweet %>
-    <% end %>
-  <% end %>
+  <div class="row">
+    <ul>
+      <% if @tweets %>
+        <% @tweets.each do |tweet| %>
+        <li><%= render tweet %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 </div>

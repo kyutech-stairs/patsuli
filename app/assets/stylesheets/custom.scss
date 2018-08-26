@@ -19,6 +19,12 @@ $head-title-font-size: (23/66) * $bund-hight-size;
   width: $head-icon-home;
 }
 
+@media(min-width: 576px){
+  .container{
+    max-width: 100%;
+  }
+}
+
 body{
   font-family: Hannotate SC;
   position: absolute;
@@ -76,7 +82,7 @@ footer{
   width: $full-width;
   height: $bund-hight-size;
   left: 0px;
-  top: resize_vh(601px);
+  top: resize_vh(610px);
   .nav_icon{
     height: icon_size(30px);
     width: icon_size(30px);
@@ -168,11 +174,48 @@ footer{
   }
 }
 
+$tweet_list: 77vh;
+.container{
+  left: 0;
+  margin: 0; padding: 0;
+  width: 100vw;
+  height: $tweet_list;
+}
 .poll_list{
-  padding-top: 20px;
+  padding: 0;
+  padding-top: 15px;
   position: absolute;
-  width: resize_vw(343px);
-  height: resize_vh(360px);
-  left: resize_vw(16px);
-  top: resize_vh(102px);
+  width: 100vw;
+  height: $tweet_list;
+  left: 0;
+  top: resize_vh(70px);
+  overflow: auto;
+  font-size: 40px;
+  ul{
+    padding: 0;
+    width: 100%;
+    li{
+      width: 100%;
+      list-style: none;
+    }
+  }
+}
+
+.tweet{
+  font-size: 60px;
+  position: relative;
+  height: resize_vh(70px);
+  .compensation{
+    position: absolute;
+    right: 80px;
+    bottom: 10px;
+    .running{
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .tweet-title{
+    position: absolute;
+    left: 100px;
+  }
 }
