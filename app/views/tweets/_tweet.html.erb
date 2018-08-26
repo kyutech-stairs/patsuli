@@ -1,9 +1,11 @@
 <div class ="tweet">
-  <%= tweet.wishing %> 
-  <span>x</span>
-  <%= tweet.count %><br>
-  <br>
-  <br>
-  <%= link_to image_tag('running.png',class: "running"), tweet_pashiris_path(tweet, tweet_id: tweet.id), method: :post %>
-  <span>￥</span><%= tweet.reward %>
+  <div class="tweet-title">
+    <%= tweet.wishing %>
+    <span>x</span>
+    <%= tweet.count %>
+  </div>
+  <div class="compensation">
+    <%= link_to image_tag('running.png',class: "running"), tweet_pashiris_path(tweet, tweet_id: tweet.id), method: :post %>
+    <span>￥</span><%= tweet.reward %>
+  </div>
 </div>
